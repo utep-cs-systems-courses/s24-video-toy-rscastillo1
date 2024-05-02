@@ -108,6 +108,7 @@ void wdt_c_handler()
   }
 }
   
+
 void update_shape();
 
 void main()
@@ -133,6 +134,7 @@ void main()
     P1OUT |= LED;	/* led on */
   }
 }
+
 
 void
 screen_update_hourglass()
@@ -167,8 +169,6 @@ update_shape()
   screen_update_hourglass();
 }
    
-
-
 void
 __interrupt_vec(PORT2_VECTOR) Port_2(){
   if (P2IFG & SWITCHES) {	      /* did a button cause this interrupt? */
@@ -176,3 +176,4 @@ __interrupt_vec(PORT2_VECTOR) Port_2(){
     switch_interrupt_handler();	/* single handler for all switches */
   }
 }
+
