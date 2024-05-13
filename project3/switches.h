@@ -2,14 +2,16 @@
 #define switches_included
 
 #define SW0 BIT3
-#define SW1 BIT0
-#define SW2 BIT1
-#define SW3 BIT2
-#define SW4 BIT3
+#define SW1 1
+#define SW2 2
+#define SW3 4
+#define SW4 8
 
-#define SWITCHES (SW1 | SW2 | SW3 | SW4)
+#define SWITCHES 15
 
 char switch_update_interrupt_sense();
+char p1_update_interrupt_sense();
+char p2_update_interrupt_sense();
 void switch_init();
 void switch_interrupt_handler();
 

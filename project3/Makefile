@@ -15,7 +15,7 @@ all:pico_draw.elf
 
 #additional rules for files
 
-pico_draw.elf: ${COMMON_OBJECTS} buzzer.o switches.o led.o p1_interrupt_handler.o p2_interrupt_handler.o state_machine.o main.o wdt_handler.o wdt_c_handler.o
+pico_draw.elf: ${COMMON_OBJECTS} pico_drawer.o buzzer.o switches.o lcd_draw_functions.o
 
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^ -lTimer -lLcd
 

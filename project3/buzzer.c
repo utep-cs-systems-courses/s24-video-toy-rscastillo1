@@ -19,7 +19,7 @@ void buzzer_starting() {
   int i = 5000;
   while(i > 0){
     i -= 20;
-    set_buzzer_period((i/i + (500/i)) % i);
+    set_buzzer_period(i);
   }
 }
 
@@ -28,7 +28,7 @@ void buzzer_cleaning()
   int i = 1;
   while(i < 5000){
     i += 10;
-    set_buzzer_period((i * i - (500*i)) % i );//lets see what this sounds like 
+    set_buzzer_period(i);//lets see what this sounds like 
   }
 }
 
